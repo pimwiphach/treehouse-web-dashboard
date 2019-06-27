@@ -167,11 +167,55 @@
           </div>
           <div class="dashboard-content">
             <div class="alert-box-container">
-              <div class="alert-box">
-                <p class="alert-message">
+              <ul class="alert-box">
+                <li class="alert-message">
+                  <p>
                   <strong>Alert</strong> A notification to alert your users to an error or issue that needs resolving.
-                </p>
-              </div>
+                  </p>
+                </li>
+                <li>
+                  <div>
+                    <svg version="1.1" id="IconClose" class="icon-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" viewBox="0 0 174.239 174.239" style="enable-background:new 0 0 174.239 174.239;" xml:space="preserve">
+                      <path d="M146.537,1.047c-1.396-1.396-3.681-1.396-5.077,0L89.658,52.849c-1.396,1.396-3.681,1.396-5.077,0L32.78,1.047
+                                    	c-1.396-1.396-3.681-1.396-5.077,0L1.047,27.702c-1.396,1.396-1.396,3.681,0,5.077l51.802,51.802c1.396,1.396,1.396,3.681,0,5.077
+                                    	L1.047,141.46c-1.396,1.396-1.396,3.681,0,5.077l26.655,26.655c1.396,1.396,3.681,1.396,5.077,0l51.802-51.802
+                                    	c1.396-1.396,3.681-1.396,5.077,0l51.801,51.801c1.396,1.396,3.681,1.396,5.077,0l26.655-26.655c1.396-1.396,1.396-3.681,0-5.077
+                                    	l-51.801-51.801c-1.396-1.396-1.396-3.681,0-5.077l51.801-51.801c1.396-1.396,1.396-3.681,0-5.077L146.537,1.047z" />
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                    </svg>
+                  </div>
+                </li>
+              </ul>
             </div>
             <section class="traffic">
               <div class="header-traffic">
@@ -182,10 +226,31 @@
                   <li>Weekly</li>
                   <li>Monthly</li>
                 </ul>
-                <div class="widget-container-full">
-                  <canvas id="trafficChart" width="400" height="300"></canvas>
-                </div>
               </div>
+              <div class="widget-container-graph">
+                <canvas id="trafficChart"></canvas>
+              </div>
+            </section>
+          </div>
+          <!-- <hr> -->
+
+          <div class="daily-container">
+            <section class="daily">
+              <div class="header-daily">
+                <h5>DAILY TRAFFIC</h5>
+              </div>
+              <div class="widget-container-bar">
+                <canvas id="dailyChart"></canvas>
+              </div>
+            </section>
+            <section class="mobile-users">
+              <div class="header-mobile-users">
+                <h5>MOBILE USERS</h5>
+              </div>
+              <div class="widget-container-circle">
+                <canvas id="doughnutChart"></canvas>
+              </div>
+              <div id="my-legend-con" class="legend-con"></div>
             </section>
           </div>
         </div>
@@ -194,37 +259,6 @@
 
 
 
-    <script>
-      var ctx = document.getElementById("trafficChart").getContext("2d");
-      var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: "line",
-
-        // The data for our dataset
-        data: {
-          labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
-          datasets: [
-            {
-              label: "My First dataset",
-              backgroundColor: "rgb(107, 112, 190, 0.3)",
-              borderColor: "rgb(107, 112, 190)",
-              borderWidth: "medium",
-              lineTension: 0,
-              pointRadius: 5,
-              pointBorderWidth: 2,
-              pointBackgroundColor: '#fff',
-              data: [0, 750, 1250, 100, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250]
-            }
-          ]
-        },
-        // Configuration options go here
-        options: {
-          responsive: false,
-          maintainAspectRatio: false
-        }
-      });
-
-    </script>
-    
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
