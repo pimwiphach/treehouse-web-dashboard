@@ -503,7 +503,7 @@ hr {
   grid-template-columns: none;
   /* grid-auto-rows: 120px; */
   grid-gap: 12px;
-  padding: 1em;
+  padding: 1.25em;
   padding-top: 0;
 }
 
@@ -629,7 +629,7 @@ hr {
   justify-content: space-between;
   /* padding: 10px; */
   background-color: #fff;
-  padding: 1em;
+  padding: 1.25em;
   width: 100%;
   box-sizing: border-box;
   flex-direction: column;
@@ -712,7 +712,7 @@ hr {
   justify-content: space-between;
   /* padding: 10px; */
   background-color: #fff;
-  padding: 1em;
+  padding: 1.25em;
   width: 100%;
   box-sizing: border-box;
   flex-direction: column;
@@ -833,6 +833,7 @@ hr {
   color: grey;
   font-weight: 400;
   float: left;
+  margin-top: 0;
 }
 
 .form-container {
@@ -849,7 +850,7 @@ hr {
   justify-content: space-between;
   /* padding: 10px; */
   background-color: #fff;
-  padding: 1em;
+  padding: 1.25em;
   width: 100%;
   box-sizing: border-box;
   flex-direction: column;
