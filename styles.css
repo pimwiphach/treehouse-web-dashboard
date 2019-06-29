@@ -414,7 +414,7 @@ hr {
   display: block;
   margin: 0;
   width: 100%;
-  border-top: 0.25px solid rgb(228, 228, 228);
+  border-top: 0.1px solid rgb(228, 228, 228);
 }
 
 /* daily container */
@@ -476,6 +476,10 @@ hr {
   position: relative;
 }
 
+.mobile-users {
+  border-top: 1px solid rgb(228, 228, 228);
+}
+
 .mobile-users h5 {
   color: grey;
   font-weight: 400;
@@ -529,7 +533,7 @@ hr {
   border-radius: 6px;
   width: 100%;
   height: 12vh;
-  margin-top: 0.5em;
+  /* margin-top: 0.5em; */
   margin-bottom: 0;
   padding: 1em;
 }
@@ -632,19 +636,18 @@ hr {
   align-items: center;
 }
 
-.hr {
-  margin: 0;
-}
-
 .member-info {
   vertical-align: middle;
   justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .member-list {
   vertical-align: middle;
   /* display: inline-block; */
-  margin-top: 0.25em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .member-list h5 {
@@ -671,6 +674,7 @@ hr {
   /* float: right; */
   color: grey;
   margin-left: 65px;
+  margin-bottom: 0.5em;
 }
 
 @media (min-width: 1240px) {
@@ -717,7 +721,18 @@ hr {
 
 @media (min-width: 768px) {
   .recent-activity-container {
-    border-left: 1px solid grey;
+    border-left: 1px solid rgb(228, 228, 228);
+  }
+}
+
+.recent-activity-container {
+  border-top: 1px solid rgb(228, 228, 228);
+}
+
+@media (min-width: 768px) {
+  .recent-activity-container {
+    border-left: 1px solid rgb(228, 228, 228);
+    border-top: 0px solid transparent;
   }
 }
 
@@ -737,13 +752,14 @@ hr {
 .activity-info {
   vertical-align: middle;
   justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .activity-list {
   /* display: inline-block; */
-  margin-top: 0.25em;
-  /* margin-right: 0.25em; */
-  margin-bottom: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .activity-list h5 {
@@ -768,9 +784,9 @@ hr {
 .activity-date {
   /* float: right; */
   color: grey;
-  margin-left: 65px;
+  margin-left: 75px;
   margin-bottom: 0.5em;
-  float: right;
+  /* float: right; */
 }
 
 @media (min-width: 1240px) {
@@ -795,8 +811,19 @@ hr {
   justify-content: center;
   display: block;
   clear: left;
-  margin-right: 1.8em;
+  margin-right: 1.5em;
   border-radius: 50px;
   float: left;
   position: relative;
+}
+
+.activity-card {
+  margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+  .mobile-users {
+    border-left: 1px solid rgb(228, 228, 228);
+    border-top: 0px solid transparent;
+  }
 }
