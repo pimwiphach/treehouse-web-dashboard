@@ -700,3 +700,85 @@ hr {
 .member-card {
   margin-bottom: 1em;
 }
+
+/* recent-activity */
+
+.recent-activity-container {
+  justify-content: space-between;
+  /* padding: 10px; */
+  background-color: #fff;
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activity-header h5 {
+  color: grey;
+  font-weight: 400;
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+.activity-info {
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.activity-list {
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 0.25em;
+}
+
+.activity-list h5 {
+  color: grey;
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 0.15em;
+  margin-top: 0;
+  display: inline-block;
+  /* margin-top: -2.4em; */
+  /* margin-left: 0em; */
+}
+
+.activity-list p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  display: inline-block;
+  color: #6b70be;
+  /* margin-top: -1.4em; */
+  /* margin-left: 5.8em; */
+}
+
+.activity-date {
+  /* float: right; */
+  color: grey;
+  /* margin-left: 65px; */
+}
+
+@media (min-width: 1240px) {
+  .activity-date {
+    /* float: right; */
+    margin-top: -50px;
+    /* margin-left: 10px; */
+    float: right;
+    vertical-align: middle;
+    justify-content: center;
+  }
+}
+
+.activity-list img {
+  /* float: left; */
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  justify-content: center;
+  display: block;
+  clear: left;
+  margin-right: 1em;
+  border-radius: 50px;
+  float: left;
+}
