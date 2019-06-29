@@ -412,10 +412,7 @@ input[type="search"] {
 
 hr {
   display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
   width: 100%;
   border-top: 0.25px solid rgb(228, 228, 228);
 }
@@ -635,6 +632,10 @@ hr {
   align-items: center;
 }
 
+.hr {
+  margin: 0;
+}
+
 .member-info {
   vertical-align: middle;
   justify-content: center;
@@ -642,7 +643,7 @@ hr {
 
 .member-list {
   vertical-align: middle;
-  display: inline-block;
+  /* display: inline-block; */
   margin-top: 0.25em;
 }
 
@@ -652,7 +653,7 @@ hr {
   font-weight: 400;
   margin-bottom: 0.15em;
   margin-top: 0;
-  display: inline-block;
+  /* display: inline-block; */
   /* margin-top: -2.4em; */
   /* margin-left: 0em; */
 }
@@ -660,7 +661,7 @@ hr {
 .member-list p {
   margin-top: 0;
   margin-bottom: 0.5em;
-  display: inline-block;
+  /* display: inline-block; */
   color: #6b70be;
   /* margin-top: -1.4em; */
   /* margin-left: 5.8em; */
@@ -675,7 +676,7 @@ hr {
 @media (min-width: 1240px) {
   .member-date {
     /* float: right; */
-    margin-top: 12px;
+    margin-top: -50px;
     margin-left: 90px;
     float: right;
     vertical-align: middle;
@@ -714,6 +715,18 @@ hr {
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .recent-activity-container {
+    border-left: 1px solid grey;
+  }
+}
+
+/* @media (min-width: 1240px) {
+  .recent-activity-container {
+    border-left: 1px solid grey;
+  }
+} */
+
 .activity-header h5 {
   color: grey;
   font-weight: 400;
@@ -727,9 +740,10 @@ hr {
 }
 
 .activity-list {
-  vertical-align: middle;
-  display: inline-block;
+  /* display: inline-block; */
   margin-top: 0.25em;
+  /* margin-right: 0.25em; */
+  margin-bottom: 0;
 }
 
 .activity-list h5 {
@@ -738,16 +752,15 @@ hr {
   font-weight: 400;
   margin-bottom: 0.15em;
   margin-top: 0;
-  display: inline-block;
-  /* margin-top: -2.4em; */
-  /* margin-left: 0em; */
+  /* display: inline-block; */
+  position: relative;
 }
 
 .activity-list p {
   margin-top: 0;
   margin-bottom: 0.5em;
-  display: inline-block;
-  color: #6b70be;
+  /* display: inline-block; */
+  color: grey;
   /* margin-top: -1.4em; */
   /* margin-left: 5.8em; */
 }
@@ -755,14 +768,18 @@ hr {
 .activity-date {
   /* float: right; */
   color: grey;
-  /* margin-left: 65px; */
+  margin-left: 65px;
+  margin-bottom: 0.5em;
+  float: right;
 }
 
 @media (min-width: 1240px) {
   .activity-date {
     /* float: right; */
-    margin-top: -50px;
+    /* margin-top: -50px; */
     /* margin-left: 10px; */
+    margin-top: -50px;
+    margin-left: 90px;
     float: right;
     vertical-align: middle;
     justify-content: center;
@@ -778,7 +795,8 @@ hr {
   justify-content: center;
   display: block;
   clear: left;
-  margin-right: 1em;
+  margin-right: 1.8em;
   border-radius: 50px;
   float: left;
+  position: relative;
 }
