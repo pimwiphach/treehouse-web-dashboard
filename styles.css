@@ -438,10 +438,10 @@ hr {
   justify-content: space-between;
   padding: 10px;
   background-color: #fff;
-  border-top: 0.3px solid rgb(228, 228, 228);
+  /* border-top: 0.3px solid rgb(228, 228, 228);
   border-bottom: 0.3px solid rgb(228, 228, 228);
   border-right: 0.3px solid #fff;
-  border-left: 0.3px solid rgb(228, 228, 228);
+  border-left: 0.3px solid rgb(228, 228, 228); */
   padding: 1em;
   width: 100%;
   box-sizing: border-box;
@@ -500,8 +500,8 @@ hr {
 .social-container {
   display: grid;
   grid-template-columns: none;
-  grid-auto-rows: 160px;
-  grid-gap: 20px;
+  /* grid-auto-rows: 120px; */
+  grid-gap: 12px;
   padding: 1em;
   padding-top: 0;
 }
@@ -530,8 +530,9 @@ hr {
   border: 1px solid rgb(228, 228, 228);
   border-radius: 6px;
   width: 100%;
-  height: 20vh;
+  height: 12vh;
   margin-top: 0.5em;
+  margin-bottom: 0;
   padding: 1em;
 }
 
@@ -539,23 +540,58 @@ hr {
 .card img {
   margin: 0.5em;
   float: left;
-  width: 50px;
-  height: 50px;
-  background-color: #333564;
-  border-radius: 50px;
+  width: 30px;
+  height: 30px;
   fill: white;
 }
 
+.icon {
+  display: block;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  -moz-border-radius: 30px; /* or 50% */
+  border-radius: 30px; /* or 50% */
+  background-color: #6b70be;
+  text-align: center;
+  font-size: 2em;
+  float: left;
+  margin-right: 1em;
+  margin-left: 0.5em;
+}
+
+.icon svg path {
+  /* display: block; */
+  /* transform: translate(-50%, -50%); */
+  /* display: flex; */
+  /* float: left; */
+  fill: white;
+}
+
+.icon svg {
+  margin: auto;
+  width: 30px;
+  vertical-align: middle;
+}
+
+#FacebookIcon {
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+}
+
 .card h5 {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 600;
   color: #6b70be;
   margin: 0;
   padding: 0;
+  /* display: flex; */
+  vertical-align: middle;
 }
 
 .card p {
-  font-size: 4em;
+  font-size: 2em;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -564,7 +600,8 @@ hr {
 .stat-info {
   text-align: left;
   margin-left: 0;
-  display: inline-block;
+  /* display: inline-block; */
   color: grey;
   vertical-align: middle;
+  /* display: flex; */
 }
