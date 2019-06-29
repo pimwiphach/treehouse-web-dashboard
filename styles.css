@@ -827,3 +827,77 @@ hr {
     border-top: 0px solid transparent;
   }
 }
+
+.message-header h5 {
+  vertical-align: middle;
+  color: grey;
+  font-weight: 400;
+  float: left;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* grid-auto-rows: 380px; */
+  /* grid-auto-columns: 100px; */
+  grid-gap: 0px;
+  /* margin: 20px; */
+  margin-top: 0px;
+}
+
+.form-container {
+  justify-content: space-between;
+  /* padding: 10px; */
+  background-color: #fff;
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message-form {
+  width: 100%;
+}
+
+.message-form input {
+  padding: 12px;
+  width: 98%;
+  border-radius: 6px;
+  background-color: rgb(252, 252, 252);
+  border: 1px solid rgb(228, 228, 228);
+  margin-bottom: 1.5em;
+  color: rgb(194, 194, 194);
+  font-size: 0.9em;
+  align-content: left;
+}
+
+.message-form textarea {
+  resize: none;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: 60px;
+  width: 98%;
+  border-radius: 6px;
+  background-color: rgb(252, 252, 252);
+  border: 1px solid rgb(228, 228, 228);
+  margin-bottom: 1.5em;
+  color: rgb(194, 194, 194);
+  font-size: 0.9em;
+  align-content: left;
+}
+
+.message-form button {
+  padding: 12px;
+  width: 98%;
+  border-radius: 6px;
+  background-color: #6b70be;
+  border: 1px solid #6b70be;
+  margin-bottom: 1.5em;
+  color: #fff;
+  font-size: 0.9em;
+  align-content: left;
+  text-transform: uppercase;
+  font-weight: 600;
+}
