@@ -846,7 +846,8 @@ hr {
   margin-top: 0px;
 }
 
-.form-container {
+.form-container,
+.settings-container {
   justify-content: space-between;
   /* padding: 10px; */
   background-color: #fff;
@@ -901,4 +902,62 @@ hr {
   align-content: left;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.settings-header h5 {
+  vertical-align: middle;
+  color: grey;
+  font-weight: 400;
+  /* float: left; */
+  margin-top: 0;
+}
+
+.setting-form p {
+  color: grey;
+  font-weight: 400;
+  float: left;
+}
+
+/* .settings-area button {
+  padding: 12px;
+  width: 50%;
+  border-radius: 6px;
+  background-color: #6b70be;
+  border: 1px solid #6b70be;
+  margin-bottom: 1.5em;
+  color: #fff;
+  font-size: 0.9em;
+  align-content: left;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+} */
+
+.settings-area {
+  width: 100%;
+}
+
+.btn-save,
+.btn-cancel {
+  padding: 12px;
+  width: 50%;
+  border-radius: 6px;
+  margin-bottom: 1.5em;
+  font-size: 0.9em;
+  align-content: left;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.btn-save {
+  float: left;
+  /* margin-right: 5px; */
+  display: inline-block;
+}
+
+.btn-cancel {
+  color: white;
+  background-color: grey;
+  display: inline-block;
 }
