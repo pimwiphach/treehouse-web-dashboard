@@ -137,6 +137,9 @@ var doughnutChart = new Chart(circleChart, {
   },
   options: {
     responsive: true, // Instruct chart js to respond nicely.
-    maintainAspectRatio: false // Add to prevent default behaviour of full-width/height
+    maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height
+    legend: {
+      position: "right"
+    }
   }
 });
