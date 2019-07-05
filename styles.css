@@ -1031,7 +1031,7 @@ input:checked + .slider:before {
   display: inline;
   padding: 12px;
   border-radius: 6px;
-  margin-bottom: 1.5em;
+  /* margin-bottom: 1.5em; */
   font-size: 0.9em;
   align-content: left;
   text-transform: uppercase;
@@ -1040,7 +1040,7 @@ input:checked + .slider:before {
 }
 
 .btn-save {
-  display: inline;
+  /* display: inline; */
   background-color: #6b70be;
   border: 1px solid #6b70be;
   color: white;
