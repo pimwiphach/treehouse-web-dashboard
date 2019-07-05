@@ -71,7 +71,10 @@ var chart = new Chart(ctx, {
 
 var barChart = document.getElementById("dailyChart");
 var dailyChart = new Chart(barChart, {
+  // The type of chart we want to create
   type: "bar",
+
+  // The data for our dataset
   data: {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [
@@ -98,15 +101,15 @@ var dailyChart = new Chart(barChart, {
         ],
         borderWidth: 1
       }
-    ],
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      legend: {
-        display: false,
-        labels: {
-          display: false
-        }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    legend: {
+      display: false,
+      labels: {
+        display: false
       }
     }
   }
@@ -125,7 +128,7 @@ var doughnutChart = new Chart(circleChart, {
         data: [15, 15, 70],
         borderColor: ["#6BF6A4", "#46DEC0", "rgba(107, 112, 190)"],
         backgroundColor: ["#6BF6A4", "#46DEC0", "rgba(107, 112, 190)"],
-        borderWidth: 1 // Specify bar border width
+        borderWidth: 1
       }
     ]
   },
@@ -135,8 +138,9 @@ var doughnutChart = new Chart(circleChart, {
     legend: {
       position: "right",
       labels: {
-        boxWidth: 30,
-        padding: 30
+        boxWidth: 15,
+        padding: 30,
+        fontSize: 14
       }
     }
   }
