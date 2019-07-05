@@ -54,16 +54,16 @@ var chart = new Chart(ctx, {
     maintainAspectRatio: false,
     legend: {
       display: false
-    },
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true
-          }
-        }
-      ]
     }
+    // scales: {
+    //   yAxes: [
+    //     {
+    //       ticks: {
+    //         beginAtZero: true
+    //       }
+    //     }
+    //   ]
+    // }
   }
 });
 
@@ -103,16 +103,10 @@ var dailyChart = new Chart(barChart, {
       responsive: true,
       maintainAspectRatio: false,
       legend: {
-        display: false
-      },
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true
-            }
-          }
-        ]
+        display: false,
+        labels: {
+          display: false
+        }
       }
     }
   }
@@ -125,12 +119,12 @@ var circleChart = document.getElementById("doughnutChart").getContext("2d");
 var doughnutChart = new Chart(circleChart, {
   type: "doughnut",
   data: {
-    labels: ["Phone", "Tablets", "Desktop"],
+    labels: ["Phones", "Tablets", "Desktop"],
     datasets: [
       {
         data: [15, 15, 70],
-        borderColor: ["#2196f38c", "#f443368c", "rgba(107, 112, 190)"],
-        backgroundColor: ["#2196f38c", "#f443368c", "rgba(107, 112, 190)"],
+        borderColor: ["#6BF6A4", "#46DEC0", "rgba(107, 112, 190)"],
+        backgroundColor: ["#6BF6A4", "#46DEC0", "rgba(107, 112, 190)"],
         borderWidth: 1 // Specify bar border width
       }
     ]
@@ -139,7 +133,11 @@ var doughnutChart = new Chart(circleChart, {
     responsive: true, // Instruct chart js to respond nicely.
     maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height
     legend: {
-      position: "right"
+      position: "right",
+      labels: {
+        boxWidth: 30,
+        padding: 30
+      }
     }
   }
 });
