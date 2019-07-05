@@ -52,6 +52,9 @@ var chart = new Chart(ctx, {
   options: {
     responsive: true,
     maintainAspectRatio: false,
+    legend: {
+      display: false
+    },
     scales: {
       yAxes: [
         {
@@ -99,6 +102,9 @@ var dailyChart = new Chart(barChart, {
     options: {
       responsive: false,
       maintainAspectRatio: false,
+      legend: {
+        display: false
+      },
       scales: {
         yAxes: [
           {
