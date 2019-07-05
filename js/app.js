@@ -76,7 +76,7 @@ var dailyChart = new Chart(barChart, {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [
       {
-        label: "# of Tomatoes",
+        label: "",
         data: [75, 100, 175, 125, 225, 200, 100],
         backgroundColor: [
           "rgba(107, 112, 190)",
@@ -100,7 +100,7 @@ var dailyChart = new Chart(barChart, {
       }
     ],
     options: {
-      responsive: false,
+      responsive: true,
       maintainAspectRatio: false,
       legend: {
         display: false
