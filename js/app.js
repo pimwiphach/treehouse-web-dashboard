@@ -145,3 +145,14 @@ var doughnutChart = new Chart(circleChart, {
     }
   }
 });
+
+//close banner
+var closeButton = document.querySelector("#IconClose");
+// console.log(closeButton);
+
+closeButton.addEventListener("click", function() {
+  var alert = document.getElementById("alertBox");
+  var textAlert = document.querySelector("alertMessage");
+  alert.style.display = "none";
+  textAlert.style.display = "none";
+});
