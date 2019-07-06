@@ -147,12 +147,18 @@ var doughnutChart = new Chart(circleChart, {
 });
 
 //close banner
-var closeButton = document.querySelector("#IconClose");
-// console.log(closeButton);
+// var closeButton = document.querySelector("#IconClose");
+// // console.log(closeButton);
 
-closeButton.addEventListener("click", function() {
-  var alert = document.getElementById("alertBox");
-  var textAlert = document.querySelector("alertMessage");
-  alert.style.display = "none";
-  textAlert.style.display = "none";
+// closeButton.addEventListener("click", function() {
+//   var alert = document.getElementById("alertBox");
+//   var textAlert = document.querySelector("alertMessage");
+//   alert.style.display = "none";
+//   textAlert.style.display = "none";
+// });
+
+const closeButton = document.querySelector(".icon-close");
+
+closeButton.addEventListeners("click", () => {
+  console.log("clicked");
 });
