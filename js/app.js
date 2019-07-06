@@ -146,7 +146,8 @@ var doughnutChart = new Chart(circleChart, {
   }
 });
 
-//close banner
+//close banner here!!
+
 // var closeButton = document.querySelector("#IconClose");
 // // console.log(closeButton);
 
