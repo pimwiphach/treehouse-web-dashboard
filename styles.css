@@ -128,6 +128,16 @@ a img {
   vertical-align: middle;
 }
 
+.alert-icon-bell path {
+  fill: #b3b3e4;
+}
+
+.alert-icon-bell:hover path {
+  /* content: ""; */
+  /* transition: 0.4s 0.1s ease-in-out; */
+  fill: #ffffff;
+}
+
 .online {
   background: rgb(104, 245, 191);
   width: 6px;
@@ -307,6 +317,10 @@ input[type="search"] {
   border-radius: 3px;
   font-size: 0.8em;
   color: rgb(221, 221, 221);
+  background-position: 98% 0;
+  background-image: url("../icons/icon-search.svg");
+  background-repeat: no-repeat;
+  background-origin: content-box;
 }
 
 ::placeholder {
