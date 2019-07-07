@@ -156,3 +156,37 @@ closeButton.addEventListener("click", function() {
   alert.style.display = "none";
   textAlert.style.display = "none";
 });
+
+//press the "Submit form" button to submit the form.
+// var submitMessageBotton = document.getElementById("SubmitFormBtn");
+// var messageUserForm = document.getElementById("messageUserForm");
+
+// submitMessageBotton.addEventListener("click", function() {
+//   messageUserForm.submit();
+// });
+
+//display error messages if both or either the ​user​ or ​message​ field is empty.
+
+function Validate() {
+  var searchContent = document.getElementById("userContent").value;
+  var messageContent = document.getElementById("messageContent").value;
+  var searchContentBox = document.getElementById("userContent");
+  var messageContentBox = document.getElementById("messageContent");
+
+  if ((searchContent == "") & (messageContent == "")) {
+    document.getElementById("error").innerHTML =
+      "*Please enter user name and message for user.";
+    searchContentBox.style.borderColor = "#ff0033";
+    messageContentBox.style.borderColor = "#ff0033";
+  } else if (searchContent == "") {
+    document.getElementById("error").innerHTML = "*Please enter user name.";
+    searchContentBox.style.borderColor = "#ff0033";
+  } else if (messageContent == "") {
+    document.getElementById("error").innerHTML =
+      "*Please enter message for user.";
+    messageContentBox.style.borderColor = "#ff0033";
+  } else {
+    document.getElementById("error").innerHTML = "";
+    messageUserForm.submit();
+  }
+}
