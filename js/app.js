@@ -148,18 +148,11 @@ var doughnutChart = new Chart(circleChart, {
 
 //close banner here!!
 
-// var closeButton = document.querySelector("#IconClose");
-// // console.log(closeButton);
+var closeButton = document.querySelector("#IconClose");
 
-// closeButton.addEventListener("click", function() {
-//   var alert = document.getElementById("alertBox");
-//   var textAlert = document.querySelector("alertMessage");
-//   alert.style.display = "none";
-//   textAlert.style.display = "none";
-// });
-
-const closeButton = document.querySelector(".icon-close");
-
-closeButton.addEventListeners("click", () => {
-  console.log("clicked");
+closeButton.addEventListener("click", function() {
+  var alert = document.getElementById("alertBox");
+  var textAlert = document.querySelector("alertMessage");
+  alert.style.display = "none";
+  textAlert.style.display = "none";
 });
