@@ -60,7 +60,7 @@ a img {
 }
 .main {
   display: grid;
-  z-index: -99;
+  z-index: 0;
   grid-area: main;
   /* grid-row-start: 1; */
   grid-row-end: 3;
