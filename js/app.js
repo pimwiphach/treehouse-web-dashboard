@@ -178,6 +178,7 @@ function Validate() {
       "*Please enter user name and message for user.";
     searchContentBox.style.borderColor = "#ff0033";
     messageContentBox.style.borderColor = "#ff0033";
+    document.getElementById("error").innerHTML.hide();
   } else if (searchContent == "") {
     document.getElementById("error").innerHTML = "*Please enter user name.";
     searchContentBox.style.borderColor = "#ff0033";
@@ -187,6 +188,16 @@ function Validate() {
     messageContentBox.style.borderColor = "#ff0033";
   } else {
     document.getElementById("error").innerHTML = "";
-    messageUserForm.submit();
+    searchContentBox.style.borderColor = "rgb(228, 228, 228)";
+    messageContentBox.style.borderColor = "rgb(228, 228, 228)";
+    // messageUserForm.submit();
   }
+
+  var confirmMessage;
+  if (confirm("Do you want to submit this message?")) {
+    confirmMessage = "Your message has been sent.";
+  } else {
+    confirmMessage = "";
+  }
+  document.getElementById("confirm").innerHTML = confirmMessage;
 }
