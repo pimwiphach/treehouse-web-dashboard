@@ -53,9 +53,10 @@ a img {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 .nav {
+  z-index: 1;
   display: grid;
   grid-area: sidenav;
 }
@@ -214,12 +215,14 @@ a img {
   transition: 0.3s all ease-in-out;
 }
 
-#IconDashboard :hover,
+/* #IconDashboard :hover,
 #IconMembers :hover,
 #IconSettings :hover,
 #IconVisits :hover {
+  height: 50px;
+  width: 50px;
   fill: #82b541;
-}
+} */
 
 #sideNav svg path {
   fill: #666799;
@@ -227,6 +230,15 @@ a img {
 
 #IconDashboard svg path {
   fill: #ffffff;
+}
+
+.sidenav-icon-link:hover {
+  /* right: 100px; */
+  height: 30px;
+  width: 5px;
+  border-radius: 0em 0.1em 0.1em 0em;
+  background-color: rgb(11, 221, 123);
+  margin-bottom: 1.63em;
 }
 
 /* When you mouse over the navigation links, change their color */
