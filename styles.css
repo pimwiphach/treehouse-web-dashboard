@@ -569,7 +569,7 @@ hr {
   border: 1px solid rgb(228, 228, 228);
   border-radius: 6px;
   width: 100%;
-  height: 13vh;
+  /* height: 13vh; */
   /* margin-top: 0.5em; */
   margin-bottom: 0;
   padding: 1em;
@@ -893,7 +893,7 @@ hr {
   border-radius: 6px;
   background-color: rgb(252, 252, 252);
   border: 1px solid rgb(228, 228, 228);
-  margin-bottom: 1.5em;
+  margin-bottom: 1.1em;
   color: rgb(194, 194, 194);
   font-size: 0.9em;
   align-content: left;
@@ -909,10 +909,15 @@ hr {
   border-radius: 6px;
   background-color: rgb(252, 252, 252);
   border: 1px solid rgb(228, 228, 228);
-  margin-bottom: 1.5em;
+  margin-bottom: 0.75em;
   color: rgb(194, 194, 194);
   font-size: 0.9em;
   align-content: left;
+}
+
+#error {
+  color: #ff0033;
+  margin-top: 0;
 }
 
 .message-form button {
@@ -927,6 +932,11 @@ hr {
   align-content: left;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.message-form button:hover {
+  background-color: #4e54a7;
+  border: 1px solid #4e54a7;
 }
 
 .message-form-container {
@@ -1102,12 +1112,29 @@ input:checked + .slider:after {
   margin-right: 5px;
 }
 
+.btn-save:hover {
+  background-color: #4e54a7;
+  border: 1px solid #4e54a7;
+  color: white;
+  width: 48%;
+  /* float: left; */
+  margin-right: 5px;
+}
+
 .btn-cancel {
   width: 48%;
   float: right;
   color: white;
   background-color: rgb(189, 189, 189);
   border: 1px solid rgb(189, 189, 189);
+}
+
+.btn-cancel:hover {
+  width: 48%;
+  float: right;
+  color: white;
+  background-color: rgb(163, 163, 163);
+  border: 1px solid rgb(163, 163, 163);
 }
 
 .settings-container {
