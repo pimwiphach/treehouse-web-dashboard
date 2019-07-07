@@ -918,6 +918,12 @@ hr {
 #error {
   color: #ff0033;
   margin-top: 0;
+  margin-bottom: 0;
+}
+
+#confirm {
+  color: #2aac92;
+  margin-top: 0;
 }
 
 .message-form button {
