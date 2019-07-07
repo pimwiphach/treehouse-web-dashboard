@@ -331,7 +331,7 @@ input[type="search"] {
   font-size: 0.8em;
   color: rgb(221, 221, 221);
   background-position: 98% 0;
-  background-image: url("../icons/icon-search.svg");
+  background-image: url("./icons/icon-search.svg");
   background-repeat: no-repeat;
   background-origin: content-box;
 }
