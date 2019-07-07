@@ -436,12 +436,13 @@
                 <h5>MESSAGE USER</h5>
               </div>
               <div class="message-form">
-                <form id="messageUserForm" onsubmit="confirm();">
+                <form id="messageUserForm" >
                   <input type="text" name="search-user" placeholder="Search for User" id="userContent"><br>
                   <!-- <input type="text" name="message" value="Message for User"> -->
                   <textarea rows="4" cols="50" name="message-for-user" form="usrform" placeholder="Message for user"
                   id="messageContent"></textarea>
                   <p id="error"></p>
+                  <p id="confirm"></p>
                   <button type="submit" form="nameform" value="Submit" id="SubmitFormBtn" onclick="Validate()">Send</button>
                 </form>
               </div>
