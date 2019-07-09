@@ -1,4 +1,5 @@
 // for a line chart
+//hourly
 
 var ctx = document.getElementById("trafficChart").getContext("2d");
 var chart = new Chart(ctx, {
@@ -66,6 +67,225 @@ var chart = new Chart(ctx, {
     // }
   }
 });
+//select type of time: hourly, daily, weekly and monthly
+
+var chosenBtn = document.getElementById("chosen");
+
+const hourlyTime = document.querySelectorAll(".frequency-type li")[0];
+
+const dailyTime = document.querySelectorAll(".frequency-type li")[1];
+
+dailyTime.addEventListener("click", function() {
+  var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: "line",
+
+    // The data for our dataset
+    data: {
+      labels: [
+        "16-22",
+        "23-29",
+        "30-5",
+        "6-12",
+        "13-19",
+        "20-26",
+        "27-3",
+        "4-10",
+        "11-17",
+        "18-24",
+        "25-31"
+      ],
+      datasets: [
+        {
+          label: "",
+          backgroundColor: "rgb(107, 112, 190, 0.2)",
+          borderColor: "rgb(107, 112, 190)",
+          borderWidth: "medium",
+          lineTension: 0,
+          pointRadius: 5,
+          pointBorderWidth: 2,
+          pointBackgroundColor: "#fff",
+          data: [
+            0,
+            750,
+            1250,
+            100,
+            1500,
+            750,
+            3250,
+            1750,
+            1250,
+            750,
+            2250,
+            1750,
+            1500
+          ]
+        }
+      ]
+    },
+    // Configuration options go here
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      }
+      // scales: {
+      //   yAxes: [
+      //     {
+      //       ticks: {
+      //         beginAtZero: true
+      //       }
+      //     }
+      //   ]
+      // }
+    }
+  });
+});
+
+const weeklyTime = document.querySelectorAll(".frequency-type li")[2];
+
+weeklyTime.addEventListener("click", function() {
+  var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: "line",
+
+    // The data for our dataset
+    data: {
+      labels: [
+        "16-22",
+        "23-29",
+        "30-5",
+        "6-12",
+        "13-19",
+        "20-26",
+        "27-3",
+        "4-10",
+        "11-17",
+        "18-24",
+        "25-31"
+      ],
+      datasets: [
+        {
+          label: "",
+          backgroundColor: "rgb(107, 112, 190, 0.2)",
+          borderColor: "rgb(107, 112, 190)",
+          borderWidth: "medium",
+          lineTension: 0,
+          pointRadius: 5,
+          pointBorderWidth: 2,
+          pointBackgroundColor: "#fff",
+          data: [
+            0,
+            350,
+            1250,
+            1750,
+            500,
+            750,
+            3250,
+            750,
+            1250,
+            1750,
+            250,
+            2750,
+            500
+          ]
+        }
+      ]
+    },
+    // Configuration options go here
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      }
+      // scales: {
+      //   yAxes: [
+      //     {
+      //       ticks: {
+      //         beginAtZero: true
+      //       }
+      //     }
+      //   ]
+      // }
+    }
+  });
+});
+
+const monthlyTime = document.querySelectorAll(".frequency-type li")[3];
+
+monthlyTime.addEventListener("click", function() {
+  var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: "line",
+
+    // The data for our dataset
+    data: {
+      labels: [
+        "16-22",
+        "23-29",
+        "30-5",
+        "6-12",
+        "13-19",
+        "20-26",
+        "27-3",
+        "4-10",
+        "11-17",
+        "18-24",
+        "25-31"
+      ],
+      datasets: [
+        {
+          label: "",
+          backgroundColor: "rgb(107, 112, 190, 0.2)",
+          borderColor: "rgb(107, 112, 190)",
+          borderWidth: "medium",
+          lineTension: 0,
+          pointRadius: 5,
+          pointBorderWidth: 2,
+          pointBackgroundColor: "#fff",
+          data: [
+            0,
+            350,
+            2250,
+            1250,
+            500,
+            750,
+            1250,
+            750,
+            350,
+            1150,
+            1750,
+            750,
+            2500
+          ]
+        }
+      ]
+    },
+    // Configuration options go here
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      }
+      // scales: {
+      //   yAxes: [
+      //     {
+      //       ticks: {
+      //         beginAtZero: true
+      //       }
+      //     }
+      //   ]
+      // }
+    }
+  });
+});
+// for (let i = 0; i < timeTypes.length; i++) {
+//   //alert(timeTypes[i].textContent);
+//   timeTypes[0].addClass("hover");
+// }
 
 // for a bar chart
 
@@ -157,14 +377,6 @@ closeButton.addEventListener("click", function() {
   textAlert.style.display = "none";
 });
 
-//press the "Submit form" button to submit the form.
-// var submitMessageBotton = document.getElementById("SubmitFormBtn");
-// var messageUserForm = document.getElementById("messageUserForm");
-
-// submitMessageBotton.addEventListener("click", function() {
-//   messageUserForm.submit();
-// });
-
 //display error messages if both or either the ​user​ or ​message​ field is empty.
 
 function Validate() {
@@ -201,3 +413,29 @@ function Validate() {
   }
   document.getElementById("confirm").innerHTML = confirmMessage;
 }
+
+//notification popup
+
+// When the user clicks on div, open the popup
+
+// function {
+//   var popup = document.getElementById("myPopup");
+//   var bellIcon = document.getElementById("AlertBell");
+//   popup.getElementById("myPopup")[0].setAttribute("show");
+// }
+
+var popup = document.getElementById("myPopup");
+var bellIcon = document.getElementById("AlertBell");
+
+bellIcon.addEventListener("click", function() {
+  popup.style.display = "block";
+});
+
+var closeNoti = document.getElementById("closeNoti");
+var badge = document.getElementById("badge");
+// console.log(closeNoti);
+
+closeNoti.addEventListener("click", function() {
+  popup.style.display = "none";
+  badge.style.display = "none";
+});
