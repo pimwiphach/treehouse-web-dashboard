@@ -23,10 +23,9 @@
             <ul class="nav-profile">
               <li>
                   <!-- container element for our notifications -->
-                <span class="online"></span>
-                <a href="#">
-                          <!-- to contain the bell icon-->
-                <svg version="1.1" id="AlertBell" class="alert-icon-bell" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <span class="online" id="badge">2</span>
+                <span>
+                  <svg version="1.1" id="AlertBell" class="alert-icon-bell" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                             <style type="text/css">
                               .st0 {
@@ -40,7 +39,15 @@
                   </g>
                   </g>
                   </svg>
-                </a>
+                </span>
+                <span class="popup" id="myPopup" style="display:none;">
+                <span class="close" id="closeNoti">&times;</span>
+                <p><strong>Victoria Chambers</strong> commented on Your App's SEO Tips</p>
+                <p>4 hours ago 10/15/15</p>
+                <hr>
+                <p><strong>Dale Byrd</strong> like the post Facebook's Changes for 2016</p>
+                <p>5 hours ago 10/15/15</p>
+                </span>
               </li>
               <li>
                 <a href="#" class="vertical-line"></a>
@@ -52,7 +59,7 @@
                 <a href="#"><h3 class="username">Josh Sullivan</h3></a>
               </li>
             </ul>
-          </div>
+          </span>
         </div>
       </header>
       <!-- for the sidebar navigation -->
@@ -169,7 +176,7 @@
           <h4 class="headline" >Dashboard</h4>
           <div class="search-container">
             <div class="search-main">
-              <input type="search" class="search-term" placeholder="Search" readOnly/>
+              <input type="search" class="search-term" id="searchInput" placeholder="Search"/>
                 <!-- <svg class="icon-search" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink"
                 enable-background="new 0 0 512 512">
                 <g>
@@ -236,7 +243,7 @@
               <div class="header-traffic">
                 <h5>TRAFFIC</h5>
                 <ul class="frequency-type">
-                  <li class="chosen">Hourly</li>
+                  <li>Hourly</li>
                   <li>Daily</li>
                   <li>Weekly</li>
                   <li>Monthly</li>
@@ -398,7 +405,6 @@
                     <p>4 hours ago</p>
                   </div>
                 </div>
-                <div class="activity-date">10/15/15</div>
               </div>
               <hr>
               <div class="activity-card">
@@ -409,7 +415,6 @@
                     <p>5 hours ago</p>
                   </div>
                 </div>
-                <div class="activity-date">10/15/15</div>
               </div>
               <hr>
               <div class="activity-card">
@@ -420,7 +425,6 @@
                     <p>5 hours ago</p>
                   </div>
                 </div>
-                <div class="activity-date">10/15/15</div>
               </div>
               <hr>
               <div class="activity-card">
@@ -431,7 +435,6 @@
                     <p>1 day ago</p>
                   </div>
                 </div>
-                <div class="activity-date">10/15/15</div>
               </div>
             </section>
           </div>
