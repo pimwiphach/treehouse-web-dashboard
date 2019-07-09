@@ -124,9 +124,10 @@ a img {
 }
 
 .alert-icon-bell {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   margin-bottom: 0;
+  margin-right: 0.1 em;
   vertical-align: middle;
 }
 
@@ -140,13 +141,113 @@ a img {
   fill: #ffffff;
 }
 
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-left: 90px;
+  margin-left: 300px;
+  /* padding-right: 10px; */
+  padding-top: 8px;
+  padding-bottom: 10px;
+  margin-right: 0;
+  z-index: 4;
+}
+
+.popup {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  bottom: -16em;
+  right: 1.5em;
+  background: white;
+  box-shadow: 0 1px 3px rgba(99, 99, 99, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  z-index: 4;
+  padding: 10px 26px;
+  font-size: 14px;
+  border-radius: 3px;
+  line-height: 1.5em;
+}
+
+.popup:hover {
+  box-shadow: 0 14px 28px rgba(190, 190, 190, 0.15),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* The actual popup */
+/* .popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+} */
+
+/* Popup arrow */
+/* .popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+} */
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+/* 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
 .online {
-  background: rgb(104, 245, 191);
-  width: 6px;
-  height: 6px;
+  background: rgb(255, 81, 81);
+  width: 14px;
+  height: 14px;
   border-radius: 80%;
   float: right;
-  position: relative;
+  position: absolute;
+  right: 140px;
+  font-size: 7px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  vertical-align: middle;
+  padding: 2px;
 }
 
 .vertical-line {
@@ -215,14 +316,14 @@ a img {
   transition: 0.3s all ease-in-out;
 }
 
-/* #IconDashboard :hover,
+#IconDashboard :hover,
 #IconMembers :hover,
 #IconSettings :hover,
 #IconVisits :hover {
   height: 50px;
   width: 50px;
   fill: #82b541;
-} */
+}
 
 #sideNav svg path {
   fill: #666799;
@@ -239,6 +340,12 @@ a img {
   border-radius: 0em 0.1em 0.1em 0em;
   background-color: rgb(11, 221, 123);
   margin-bottom: 1.63em;
+}
+
+.icon-open img {
+  width: 22px;
+  height: 22px;
+  float: right;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -331,9 +438,10 @@ input[type="search"] {
   font-size: 0.8em;
   color: rgb(221, 221, 221);
   background-position: 98% 0;
-  background-image: url("../icons/icon-search.svg");
+  background-image: url("./icons/icon-search.svg");
   background-repeat: no-repeat;
   background-origin: content-box;
+  cursor: pointer;
 }
 
 ::placeholder {
@@ -411,23 +519,32 @@ input[type="search"] {
 
 .frequency-type {
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   color: grey;
   /* float: right; */
   margin: 0;
 }
 
 .frequency-type li {
-  margin-left: 1em;
+  background-color: rgb(255, 255, 255);
+  padding: 0.4em 1em 0.4em 1em;
+  border-radius: 30px;
+  color: grey;
+  margin: 0;
+  z-index: 1;
   font-weight: 600;
   font-size: 12px;
 }
 
-.chosen {
+.frequency-type li:hover {
   background-color: rgb(11, 221, 123);
   padding: 0.4em 1em 0.4em 1em;
   border-radius: 30px;
   color: white;
+  margin: 0;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 12px;
 }
 
 .widget-container-graph {
