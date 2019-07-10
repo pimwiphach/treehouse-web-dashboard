@@ -539,10 +539,10 @@ input[type="search"] {
 }
 
 .dashboard-content {
-  /* margin-left: 1em; */
-  /* margin-right: 1em; */
-  padding-left: 1em;
-  padding-right: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  /* padding-left: 1em;
+  padding-right: 1em; */
 }
 
 .alert-box {
@@ -650,10 +650,8 @@ input[type="search"] {
 
 @media (min-width: 768px) {
   .widget-container-graph {
-    position: relative;
     height: 50vh;
     width: 92vw;
-    margin-right: 0;
   }
 }
 

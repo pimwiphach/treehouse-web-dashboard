@@ -12,6 +12,7 @@ var chart = new Chart(ctx, {
   // The data for our dataset
   data: {
     labels: [
+      "",
       "16-22",
       "23-29",
       "30-5",
@@ -39,7 +40,7 @@ var chart = new Chart(ctx, {
         pointBackgroundColor: "#fff",
         data: [
           0,
-          500,
+          750,
           1250,
           1000,
           1500,
@@ -104,6 +105,7 @@ hourlyTime.addEventListener("click", function() {
     // The data for our dataset
     data: {
       labels: [
+        "",
         "16-22",
         "23-29",
         "30-5",
@@ -114,7 +116,8 @@ hourlyTime.addEventListener("click", function() {
         "4-10",
         "11-17",
         "18-24",
-        "25-31"
+        "25-31",
+        ""
       ],
       datasets: [
         {
@@ -195,6 +198,7 @@ dailyTime.addEventListener("click", function() {
     // The data for our dataset
     data: {
       labels: [
+        "",
         "16-22",
         "23-29",
         "30-5",
@@ -205,7 +209,8 @@ dailyTime.addEventListener("click", function() {
         "4-10",
         "11-17",
         "18-24",
-        "25-31"
+        "25-31",
+        ""
       ],
       datasets: [
         {
@@ -282,6 +287,7 @@ weeklyTime.addEventListener("click", function() {
     // The data for our dataset
     data: {
       labels: [
+        "",
         "16-22",
         "23-29",
         "30-5",
@@ -292,7 +298,8 @@ weeklyTime.addEventListener("click", function() {
         "4-10",
         "11-17",
         "18-24",
-        "25-31"
+        "25-31",
+        ""
       ],
       datasets: [
         {
@@ -369,6 +376,7 @@ monthlyTime.addEventListener("click", function() {
     // The data for our dataset
     data: {
       labels: [
+        "",
         "16-22",
         "23-29",
         "30-5",
@@ -379,7 +387,8 @@ monthlyTime.addEventListener("click", function() {
         "4-10",
         "11-17",
         "18-24",
-        "25-31"
+        "25-31",
+        ""
       ],
       datasets: [
         {
