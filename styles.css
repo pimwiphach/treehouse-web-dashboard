@@ -644,13 +644,13 @@ input[type="search"] {
 
 .widget-container-graph {
   position: relative;
-  height: 50vh;
+  height: 40vh;
   width: 92vw;
 }
 
 @media (min-width: 768px) {
   .widget-container-graph {
-    height: 50vh;
+    height: 40vh;
     width: 92vw;
   }
 }
