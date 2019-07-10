@@ -2,6 +2,9 @@
 //hourly
 
 var ctx = document.getElementById("trafficChart").getContext("2d");
+//select type of time: hourly, daily, weekly and monthly
+
+var ctx = document.getElementById("trafficChart").getContext("2d");
 var chart = new Chart(ctx, {
   // The type of chart we want to create
   type: "line",
@@ -19,23 +22,26 @@ var chart = new Chart(ctx, {
       "4-10",
       "11-17",
       "18-24",
-      "25-31"
+      "25-31",
+      ""
     ],
     datasets: [
       {
         label: "",
         backgroundColor: "rgb(107, 112, 190, 0.2)",
         borderColor: "rgb(107, 112, 190)",
-        borderWidth: "medium",
+        borderWidth: 1,
         lineTension: 0,
         pointRadius: 5,
+        borderCapStyle: "round",
+        borderJoinStyle: "bevel",
         pointBorderWidth: 2,
         pointBackgroundColor: "#fff",
         data: [
           0,
-          750,
+          500,
           1250,
-          100,
+          1000,
           1500,
           2000,
           1500,
@@ -55,23 +61,129 @@ var chart = new Chart(ctx, {
     maintainAspectRatio: false,
     legend: {
       display: false
+    },
+    scales: {
+      xAxes: [
+        {
+          gridLines: {
+            drawTicks: true,
+            offsetGridLines: false
+          },
+          ticks: {
+            padding: 15,
+            labelOffset: 30
+          }
+        }
+      ],
+      yAxes: [
+        {
+          gridLines: {
+            drawTicks: false
+          },
+          ticks: {
+            beginAtZero: true,
+            padding: 15,
+            labelOffset: 20
+          }
+        }
+      ]
     }
-    // scales: {
-    //   yAxes: [
-    //     {
-    //       ticks: {
-    //         beginAtZero: true
-    //       }
-    //     }
-    //   ]
-    // }
   }
 });
-//select type of time: hourly, daily, weekly and monthly
 
 var chosenBtn = document.getElementById("chosen");
 
 const hourlyTime = document.querySelectorAll(".frequency-type li")[0];
+
+hourlyTime.addEventListener("click", function() {
+  var ctx = document.getElementById("trafficChart").getContext("2d");
+  var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: "line",
+
+    // The data for our dataset
+    data: {
+      labels: [
+        "16-22",
+        "23-29",
+        "30-5",
+        "6-12",
+        "13-19",
+        "20-26",
+        "27-3",
+        "4-10",
+        "11-17",
+        "18-24",
+        "25-31"
+      ],
+      datasets: [
+        {
+          label: "",
+          backgroundColor: "rgb(107, 112, 190, 0.2)",
+          borderColor: "rgb(107, 112, 190)",
+          borderWidth: 1,
+          lineTension: 0,
+          pointRadius: 5,
+          borderCapStyle: "round",
+          borderJoinStyle: "bevel",
+          pointBorderWidth: 2,
+          pointBackgroundColor: "#fff",
+          data: [
+            0,
+            750,
+            1250,
+            100,
+            1500,
+            2000,
+            1500,
+            1750,
+            1250,
+            1750,
+            2250,
+            1750,
+            2250
+          ]
+        }
+      ]
+    },
+    // Configuration options go here
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [
+          {
+            gridLines: {
+              drawTicks: true,
+              offsetGridLines: false
+            },
+            ticks: {
+              padding: 15,
+              labelOffset: 30
+            }
+          }
+        ],
+        yAxes: [
+          {
+            gridLines: {
+              drawTicks: false
+            },
+            ticks: {
+              beginAtZero: true,
+              padding: 15,
+              labelOffset: 20
+            }
+          }
+        ]
+      }
+    }
+  });
+});
+
+//daily
 
 const dailyTime = document.querySelectorAll(".frequency-type li")[1];
 
@@ -110,7 +222,7 @@ dailyTime.addEventListener("click", function() {
             750,
             1250,
             100,
-            1500,
+            500,
             750,
             3250,
             1750,
@@ -129,16 +241,33 @@ dailyTime.addEventListener("click", function() {
       maintainAspectRatio: false,
       legend: {
         display: false
+      },
+      scales: {
+        xAxes: [
+          {
+            gridLines: {
+              drawTicks: true,
+              offsetGridLines: false
+            },
+            ticks: {
+              padding: 15,
+              labelOffset: 30
+            }
+          }
+        ],
+        yAxes: [
+          {
+            gridLines: {
+              drawTicks: false
+            },
+            ticks: {
+              beginAtZero: true,
+              padding: 15,
+              labelOffset: 20
+            }
+          }
+        ]
       }
-      // scales: {
-      //   yAxes: [
-      //     {
-      //       ticks: {
-      //         beginAtZero: true
-      //       }
-      //     }
-      //   ]
-      // }
     }
   });
 });
@@ -199,16 +328,33 @@ weeklyTime.addEventListener("click", function() {
       maintainAspectRatio: false,
       legend: {
         display: false
+      },
+      scales: {
+        xAxes: [
+          {
+            gridLines: {
+              drawTicks: true,
+              offsetGridLines: false
+            },
+            ticks: {
+              padding: 15,
+              labelOffset: 30
+            }
+          }
+        ],
+        yAxes: [
+          {
+            gridLines: {
+              drawTicks: false
+            },
+            ticks: {
+              beginAtZero: true,
+              padding: 15,
+              labelOffset: 20
+            }
+          }
+        ]
       }
-      // scales: {
-      //   yAxes: [
-      //     {
-      //       ticks: {
-      //         beginAtZero: true
-      //       }
-      //     }
-      //   ]
-      // }
     }
   });
 });
@@ -269,16 +415,33 @@ monthlyTime.addEventListener("click", function() {
       maintainAspectRatio: false,
       legend: {
         display: false
+      },
+      scales: {
+        xAxes: [
+          {
+            gridLines: {
+              drawTicks: true,
+              offsetGridLines: false
+            },
+            ticks: {
+              padding: 15,
+              labelOffset: 30
+            }
+          }
+        ],
+        yAxes: [
+          {
+            gridLines: {
+              drawTicks: false
+            },
+            ticks: {
+              beginAtZero: true,
+              padding: 15,
+              labelOffset: 20
+            }
+          }
+        ]
       }
-      // scales: {
-      //   yAxes: [
-      //     {
-      //       ticks: {
-      //         beginAtZero: true
-      //       }
-      //     }
-      //   ]
-      // }
     }
   });
 });
@@ -384,34 +547,37 @@ function Validate() {
   var messageContent = document.getElementById("messageContent").value;
   var searchContentBox = document.getElementById("userContent");
   var messageContentBox = document.getElementById("messageContent");
+  var submitFormBtn = document.getElementById("SubmitFormBtn");
 
   if ((searchContent == "") & (messageContent == "")) {
     document.getElementById("error").innerHTML =
       "*Please enter user name and message for user.";
     searchContentBox.style.borderColor = "#ff0033";
     messageContentBox.style.borderColor = "#ff0033";
-    document.getElementById("error").innerHTML.hide();
+    // document.getElementById("error").innerHTML.hide();
+    submitFormBtn.disabled = true;
   } else if (searchContent == "") {
     document.getElementById("error").innerHTML = "*Please enter user name.";
     searchContentBox.style.borderColor = "#ff0033";
+    submitFormBtn.disabled = true;
   } else if (messageContent == "") {
     document.getElementById("error").innerHTML =
       "*Please enter message for user.";
     messageContentBox.style.borderColor = "#ff0033";
+    submitFormBtn.disabled = true;
   } else {
     document.getElementById("error").innerHTML = "";
     searchContentBox.style.borderColor = "rgb(228, 228, 228)";
     messageContentBox.style.borderColor = "rgb(228, 228, 228)";
     // messageUserForm.submit();
+    var confirmMessage;
+    if (confirm("Do you want to submit this message?")) {
+      confirmMessage = "Your message has been sent.";
+    } else {
+      confirmMessage = "";
+    }
+    document.getElementById("confirm").innerHTML = confirmMessage;
   }
-
-  var confirmMessage;
-  if (confirm("Do you want to submit this message?")) {
-    confirmMessage = "Your message has been sent.";
-  } else {
-    confirmMessage = "";
-  }
-  document.getElementById("confirm").innerHTML = confirmMessage;
 }
 
 //notification popup
