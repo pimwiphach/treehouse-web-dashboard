@@ -31,7 +31,7 @@ var chart = new Chart(ctx, {
         label: "",
         backgroundColor: "rgb(107, 112, 190, 0.2)",
         borderColor: "rgb(107, 112, 190)",
-        borderWidth: 1,
+        borderWidth: 2,
         lineTension: 0,
         pointRadius: 5,
         borderCapStyle: "round",
@@ -124,7 +124,7 @@ hourlyTime.addEventListener("click", function() {
           label: "",
           backgroundColor: "rgb(107, 112, 190, 0.2)",
           borderColor: "rgb(107, 112, 190)",
-          borderWidth: 1,
+          borderWidth: 2,
           lineTension: 0,
           pointRadius: 5,
           borderCapStyle: "round",
@@ -135,7 +135,7 @@ hourlyTime.addEventListener("click", function() {
             0,
             750,
             1250,
-            100,
+            1000,
             1500,
             2000,
             1500,
@@ -157,18 +157,6 @@ hourlyTime.addEventListener("click", function() {
         display: false
       },
       scales: {
-        xAxes: [
-          {
-            gridLines: {
-              drawTicks: true,
-              offsetGridLines: false
-            },
-            ticks: {
-              padding: 15,
-              labelOffset: 30
-            }
-          }
-        ],
         yAxes: [
           {
             gridLines: {
@@ -217,9 +205,11 @@ dailyTime.addEventListener("click", function() {
           label: "",
           backgroundColor: "rgb(107, 112, 190, 0.2)",
           borderColor: "rgb(107, 112, 190)",
-          borderWidth: "medium",
+          borderWidth: 2,
           lineTension: 0,
           pointRadius: 5,
+          borderCapStyle: "round",
+          borderJoinStyle: "bevel",
           pointBorderWidth: 2,
           pointBackgroundColor: "#fff",
           data: [
@@ -235,7 +225,7 @@ dailyTime.addEventListener("click", function() {
             750,
             2250,
             1750,
-            1500
+            2250
           ]
         }
       ]
@@ -248,18 +238,6 @@ dailyTime.addEventListener("click", function() {
         display: false
       },
       scales: {
-        xAxes: [
-          {
-            gridLines: {
-              drawTicks: true,
-              offsetGridLines: false
-            },
-            ticks: {
-              padding: 15,
-              labelOffset: 30
-            }
-          }
-        ],
         yAxes: [
           {
             gridLines: {
@@ -306,9 +284,11 @@ weeklyTime.addEventListener("click", function() {
           label: "",
           backgroundColor: "rgb(107, 112, 190, 0.2)",
           borderColor: "rgb(107, 112, 190)",
-          borderWidth: "medium",
+          borderWidth: 2,
           lineTension: 0,
           pointRadius: 5,
+          borderCapStyle: "round",
+          borderJoinStyle: "bevel",
           pointBorderWidth: 2,
           pointBackgroundColor: "#fff",
           data: [
@@ -324,7 +304,7 @@ weeklyTime.addEventListener("click", function() {
             1750,
             250,
             2750,
-            500
+            750
           ]
         }
       ]
@@ -337,18 +317,6 @@ weeklyTime.addEventListener("click", function() {
         display: false
       },
       scales: {
-        xAxes: [
-          {
-            gridLines: {
-              drawTicks: true,
-              offsetGridLines: false
-            },
-            ticks: {
-              padding: 15,
-              labelOffset: 30
-            }
-          }
-        ],
         yAxes: [
           {
             gridLines: {
@@ -395,9 +363,11 @@ monthlyTime.addEventListener("click", function() {
           label: "",
           backgroundColor: "rgb(107, 112, 190, 0.2)",
           borderColor: "rgb(107, 112, 190)",
-          borderWidth: "medium",
+          borderWidth: 2,
           lineTension: 0,
           pointRadius: 5,
+          borderCapStyle: "round",
+          borderJoinStyle: "bevel",
           pointBorderWidth: 2,
           pointBackgroundColor: "#fff",
           data: [
@@ -413,7 +383,7 @@ monthlyTime.addEventListener("click", function() {
             1150,
             1750,
             750,
-            2500
+            1750
           ]
         }
       ]
@@ -426,18 +396,6 @@ monthlyTime.addEventListener("click", function() {
         display: false
       },
       scales: {
-        xAxes: [
-          {
-            gridLines: {
-              drawTicks: true,
-              offsetGridLines: false
-            },
-            ticks: {
-              padding: 15,
-              labelOffset: 30
-            }
-          }
-        ],
         yAxes: [
           {
             gridLines: {
