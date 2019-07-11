@@ -539,7 +539,7 @@ input[type="search"] {
 
 .dashboard-content {
   margin-left: 1em;
-  margin-right: 1em;
+  /* margin-right: 1em; */
   /* padding-left: 1em;
   padding-right: 1em; */
 }
@@ -652,15 +652,13 @@ canvas {
 
 @media (min-width: 768px) {
   .widget-container-graph {
-    height: 40vh;
-    width: 90vw;
   }
 }
 
 #trafficChart {
   margin-top: 1.25em;
-  width: 30px;
-  height: 30px;
+  /* width: 30px;
+  height: 30px; */
   /* margin-bottom: 1.25em; */
 }
 
