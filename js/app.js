@@ -60,6 +60,8 @@ var chart = new Chart(ctx, {
   options: {
     responsive: true,
     maintainAspectRatio: false,
+    onResize: null,
+    aspectRatio: 2,
     legend: {
       display: false
     },
@@ -527,6 +529,8 @@ function Validate() {
   var searchContentBox = document.getElementById("userContent");
   var messageContentBox = document.getElementById("messageContent");
   var submitFormBtn = document.getElementById("SubmitFormBtn");
+  var errorMsg = document.getElementById("error");
+  var confirmMsg = document.getElementById("confirm");
 
   var dialogOverlay = document.getElementById("dialogoverlay");
   var dialogBox = document.getElementById("dialogbox");
@@ -535,7 +539,7 @@ function Validate() {
   var dialogFoot = document.getElementById("dialogfoot");
 
   if ((searchContent == "") & (messageContent == "")) {
-    document.getElementById("error").innerHTML =
+    errorMsg.innerHTML =
       "*Please fill out user field and message field before sending";
     searchContentBox.style.borderColor = "#ff0033";
     messageContentBox.style.borderColor = "#ff0033";
@@ -544,30 +548,25 @@ function Validate() {
     dialogBox.style.display = "block";
     dialogOverlay.style.display = "block";
     dialogHead.innerHTML =
-      "*Please fill out user and message field before sending";
+      "Please fill out user and message field before sending";
   } else if (searchContent == "") {
-    document.getElementById("error").innerHTML =
-      "*Please fill out user field before sending";
+    errorMsg.innerHTML = "*Please fill out user field before sending";
     searchContentBox.style.borderColor = "#ff0033";
     submitFormBtn.disabled = true;
     submitFormBtn.disabled = false;
     dialogBox.style.display = "block";
     dialogOverlay.style.display = "block";
-    dialogHead.innerHTML = "*Please fill out user field before sending";
+    dialogHead.innerHTML = "Please fill out user field before sending";
   } else if (messageContent == "") {
-    document.getElementById("error").innerHTML =
-      "*Please fill out message field before sending";
+    errorMsg.innerHTML = "*Please fill out message field before sending";
     messageContentBox.style.borderColor = "#ff0033";
     submitFormBtn.disabled = true;
     submitFormBtn.disabled = false;
-    // document.getElementById("error").innerHTML = "";
     dialogBox.style.display = "block";
     dialogOverlay.style.display = "block";
-    dialogHead.innerHTML = "*Please fill out message field before sending";
+    dialogHead.innerHTML = "Please fill out message field before sending";
   } else {
-    document.getElementById(
-      "confirm"
-    ).innerHTML = `Message successfully sent to ${searchContent}`;
+    confirmMsg.innerHTML = `Message successfully sent to ${searchContent}`;
     searchContentBox.style.borderColor = "rgb(11, 221, 123)";
     messageContentBox.style.borderColor = "rgb(11, 221, 123)";
     // messageUserForm.submit();
