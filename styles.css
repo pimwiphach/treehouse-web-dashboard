@@ -53,7 +53,6 @@ a img {
     grid-template-rows: 58px 1fr;
     grid-template-areas:
       "header header"
-      "sidenav main"
       "sidenav main";
     height: 100vh;
   }
@@ -591,6 +590,10 @@ input[type="search"] {
   }
 }
 
+canvas {
+  max-width: 100%;
+}
+
 .header-traffic {
   /* margin-bottom: 0.25em; */
   padding-bottom: 1em;
@@ -643,7 +646,6 @@ input[type="search"] {
 }
 
 .widget-container-graph {
-  position: relative;
   height: 40vh;
   width: 92vw;
 }
@@ -651,7 +653,7 @@ input[type="search"] {
 @media (min-width: 768px) {
   .widget-container-graph {
     height: 40vh;
-    width: 92vw;
+    width: 90vw;
   }
 }
 
