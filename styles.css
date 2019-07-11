@@ -75,7 +75,6 @@ a img {
   display: flex;
   grid-area: sidenav;
   flex-direction: row;
-  /* justify-content: space-evenly; */
 }
 
 @media (min-width: 768px) {
@@ -92,8 +91,6 @@ a img {
   grid-area: main;
   grid-row-start: 3;
   grid-row-end: 3;
-  /* background-color: #d8a929; */
-  /* height: 338px; */
 }
 
 @media (min-width: 768px) {
@@ -140,6 +137,7 @@ a img {
 .trademark {
   font-size: 0.5em;
 }
+
 /* header-nav-profile */
 
 .nav-profile {
@@ -162,8 +160,6 @@ a img {
 }
 
 .alert-icon-bell:hover path {
-  /* content: ""; */
-  /* transition: 0.4s 0.1s ease-in-out; */
   fill: #ffffff;
 }
 
@@ -174,7 +170,6 @@ a img {
   font-weight: bold;
   padding-left: 90px;
   margin-left: 300px;
-  /* padding-right: 10px; */
   padding-top: 8px;
   padding-bottom: 10px;
   margin-right: 0;
@@ -221,58 +216,12 @@ a img {
     0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-/* The actual popup */
-/* .popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-} */
-
-/* Popup arrow */
-/* .popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-} */
-
 /* Toggle this class - hide and show the popup */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
-/* 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-} */
-
-/* @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-} */
 
 .badge {
   background: rgb(255, 81, 81);
@@ -328,7 +277,7 @@ a img {
   left: 0;
   z-index: 0;
   background-color: #333564;
-  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-x: hidden;
   margin: auto;
   text-align: center;
 }
@@ -369,9 +318,7 @@ a img {
   text-decoration: none;
   font-size: 25px;
   color: #818181;
-  /* display: block; */
   text-align: center;
-  /* margin-right: 60px; */
   margin-top: 14px;
   margin-bottom: 14px;
 }
@@ -414,14 +361,6 @@ a img {
   }
 }
 
-/* @media (min-width: 768px) {
-  #IconDashboard :hover,
-  #IconMembers :hover,
-  #IconSettings :hover,
-  #IconVisits :hover {
-  }
-} */
-
 #sideNav svg path {
   fill: #666799;
 }
@@ -451,22 +390,13 @@ a img {
   /* border: 6px solid greenyellow; */
 }
 
-/* 
-svg:hover {
-  fill: #82B541;
-} */
-
 .main-container {
-  /* display: grid; */
-  /* margin-left: 90px; */
-  /* padding: 0px 0px; */
-  /* justify-content: space-between; */
+  display: grid;
   margin-left: 1em;
-  /* margin-right: 0.5em; */
   padding: 0px;
   /* height: 150px; */
   /* background-color: #1d4eaf; */
-  color: rgb(28, 129, 230);
+  /* color: rgb(28, 129, 230); */
   display: flex;
   position: relative;
 }
@@ -482,22 +412,14 @@ svg:hover {
 .headline,
 .search-container {
   display: inline-block;
-  /* vertical-align: middle; */
 }
 
 .search-container {
   display: grid;
-  /* padding-top: 0.05em; */
-  /* padding-bottom: 0.05em; */
-  /* padding-left: 4.5em; */
   background: #f7f7f7;
-  /* padding-left: 40%; */
-  /* padding-right: 20%; */
   padding-top: 0.8em;
   padding-bottom: 0.8em;
-  /* margin-right: 20%; */
   border: 0.5px solid #ebebeb;
-  /* float: right; */
   width: 100%;
 }
 
@@ -509,7 +431,6 @@ svg:hover {
 
 @media (min-width: 1025px) {
   .search-container {
-    /* padding-left: 65%; */
     overflow: hidden;
   }
 }
@@ -539,9 +460,7 @@ input[type="search"] {
 
 .dashboard-content {
   margin-left: 1em;
-  /* margin-right: 1em; */
-  /* padding-left: 1em;
-  padding-right: 1em; */
+  margin-right: 1em;
 }
 
 .alert-box {
@@ -561,11 +480,8 @@ input[type="search"] {
 }
 
 .alert-message p {
-  /* margin-left: 1em; */
   margin-right: 1em;
   list-style: none;
-  /* display: inline-block; */
-  /* float: left; */
 }
 
 .icon-close {
@@ -590,12 +506,7 @@ input[type="search"] {
   }
 }
 
-canvas {
-  max-width: 100%;
-}
-
 .header-traffic {
-  /* margin-bottom: 0.25em; */
   padding-bottom: 1em;
   display: flex;
   align-items: center;
@@ -646,19 +557,22 @@ canvas {
 }
 
 .widget-container-graph {
-  height: 40vh;
+  position: relative;
+  height: 30vh;
   width: 92vw;
 }
 
 @media (min-width: 768px) {
   .widget-container-graph {
+    height: 40vh;
+    width: 90vw;
   }
 }
 
 #trafficChart {
   margin-top: 1.25em;
-  /* width: 30px;
-  height: 30px; */
+  width: 30px;
+  height: 30px;
   /* margin-bottom: 1.25em; */
 }
 
