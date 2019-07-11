@@ -518,20 +518,21 @@ function Validate() {
 
   if ((searchContent == "") & (messageContent == "")) {
     document.getElementById("error").innerHTML =
-      "*Please enter user name and message for user.";
+      "*Please fill out user field and message field before sending";
     searchContentBox.style.borderColor = "#ff0033";
     messageContentBox.style.borderColor = "#ff0033";
     // document.getElementById("error").innerHTML.hide();
     submitFormBtn.disabled = true;
     submitFormBtn.disabled = false;
   } else if (searchContent == "") {
-    document.getElementById("error").innerHTML = "*Please enter user name.";
+    document.getElementById("error").innerHTML =
+      "*Please fill out user field before sending";
     searchContentBox.style.borderColor = "#ff0033";
     submitFormBtn.disabled = true;
     submitFormBtn.disabled = false;
   } else if (messageContent == "") {
     document.getElementById("error").innerHTML =
-      "*Please enter message for user.";
+      "*Please fill out message field before sending";
     messageContentBox.style.borderColor = "#ff0033";
     submitFormBtn.disabled = true;
     submitFormBtn.disabled = false;
@@ -542,7 +543,7 @@ function Validate() {
     // messageUserForm.submit();
     var confirmMessage;
     if (confirm("Do you want to submit this message?")) {
-      confirmMessage = "Your message has been sent.";
+      confirmMessage = `Message successfully sent to ${searchContent}`;
     } else {
       confirmMessage = "";
     }
