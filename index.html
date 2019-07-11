@@ -444,6 +444,15 @@
           </div>
 
           <hr>
+
+          <div id="dialogoverlay"></div>
+          <div id="dialogbox">
+            <div>
+              <div id="dialoghead"></div>
+              <div id="dialogbody"><button id="dialogbtn" onclick="function()">OK</button></div>
+              <div id="dialogfoot"></div>
+            </div>
+          </div>
           
           <div class="form-container">
             <section class="message-form-container">
@@ -453,7 +462,6 @@
               <div class="message-form">
                 <form id="messageUserForm" >
                   <input type="text" name="search-user" placeholder="Search for User" id="userContent"><br>
-                  <!-- <input type="text" name="message" value="Message for User"> -->
                   <textarea rows="4" cols="50" name="message-for-user" form="usrform" placeholder="Message for user"
                   id="messageContent"></textarea>
                   <p id="error"></p>
