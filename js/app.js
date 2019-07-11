@@ -523,15 +523,18 @@ function Validate() {
     messageContentBox.style.borderColor = "#ff0033";
     // document.getElementById("error").innerHTML.hide();
     submitFormBtn.disabled = true;
+    submitFormBtn.disabled = false;
   } else if (searchContent == "") {
     document.getElementById("error").innerHTML = "*Please enter user name.";
     searchContentBox.style.borderColor = "#ff0033";
     submitFormBtn.disabled = true;
+    submitFormBtn.disabled = false;
   } else if (messageContent == "") {
     document.getElementById("error").innerHTML =
       "*Please enter message for user.";
     messageContentBox.style.borderColor = "#ff0033";
     submitFormBtn.disabled = true;
+    submitFormBtn.disabled = false;
   } else {
     document.getElementById("error").innerHTML = "";
     searchContentBox.style.borderColor = "rgb(228, 228, 228)";
