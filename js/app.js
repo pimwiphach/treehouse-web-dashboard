@@ -507,6 +507,18 @@ closeButton.addEventListener("click", function() {
   textAlert.style.display = "none";
 });
 
+var dialogOverlay = document.getElementById("dialogoverlay");
+var dialogBox = document.getElementById("dialogbox");
+var dialogHead = document.getElementById("dialoghead");
+var dialogBody = document.getElementById("dialogbody");
+var dialogBtn = document.getElementById("dialogbtn");
+
+dialogBtn.addEventListener("click", function() {
+  dialogOverlay.style.display = "none";
+  dialogBox.style.display = "none";
+  dialogB.style.display = "none";
+});
+
 //display error messages if both or either the ​user​ or ​message​ field is empty.
 
 function Validate() {
@@ -516,38 +528,61 @@ function Validate() {
   var messageContentBox = document.getElementById("messageContent");
   var submitFormBtn = document.getElementById("SubmitFormBtn");
 
+  var dialogOverlay = document.getElementById("dialogoverlay");
+  var dialogBox = document.getElementById("dialogbox");
+  var dialogHead = document.getElementById("dialoghead");
+  var dialogBody = document.getElementById("dialogbody");
+  var dialogFoot = document.getElementById("dialogfoot");
+
   if ((searchContent == "") & (messageContent == "")) {
     document.getElementById("error").innerHTML =
       "*Please fill out user field and message field before sending";
     searchContentBox.style.borderColor = "#ff0033";
     messageContentBox.style.borderColor = "#ff0033";
-    // document.getElementById("error").innerHTML.hide();
     submitFormBtn.disabled = true;
     submitFormBtn.disabled = false;
+    dialogBox.style.display = "block";
+    dialogOverlay.style.display = "block";
+    dialogHead.innerHTML =
+      "*Please fill out user and message field before sending";
   } else if (searchContent == "") {
     document.getElementById("error").innerHTML =
       "*Please fill out user field before sending";
     searchContentBox.style.borderColor = "#ff0033";
     submitFormBtn.disabled = true;
     submitFormBtn.disabled = false;
+    dialogBox.style.display = "block";
+    dialogOverlay.style.display = "block";
+    dialogHead.innerHTML = "*Please fill out user field before sending";
   } else if (messageContent == "") {
     document.getElementById("error").innerHTML =
       "*Please fill out message field before sending";
     messageContentBox.style.borderColor = "#ff0033";
     submitFormBtn.disabled = true;
     submitFormBtn.disabled = false;
+    // document.getElementById("error").innerHTML = "";
+    dialogBox.style.display = "block";
+    dialogOverlay.style.display = "block";
+    dialogHead.innerHTML = "*Please fill out message field before sending";
   } else {
-    document.getElementById("error").innerHTML = "";
-    searchContentBox.style.borderColor = "rgb(228, 228, 228)";
-    messageContentBox.style.borderColor = "rgb(228, 228, 228)";
+    document.getElementById(
+      "confirm"
+    ).innerHTML = `Message successfully sent to ${searchContent}`;
+    searchContentBox.style.borderColor = "rgb(11, 221, 123)";
+    messageContentBox.style.borderColor = "rgb(11, 221, 123)";
     // messageUserForm.submit();
-    var confirmMessage;
-    if (confirm("Do you want to submit this message?")) {
-      confirmMessage = `Message successfully sent to ${searchContent}`;
-    } else {
-      confirmMessage = "";
-    }
-    document.getElementById("confirm").innerHTML = confirmMessage;
+    // var confirmMessage;
+    // if (confirm("Do you want to submit this message?")) {
+    //   // dialogOverlay.style.display = "block";
+    //   confirmMessage = `Message successfully sent to ${searchContent}`;
+    // } else {
+    //   confirmMessage = "";
+    // }
+    // document.getElementById("confirm").innerHTML = confirmMessage;
+    dialogBox.style.display = "block";
+    dialogOverlay.style.display = "block";
+    dialogHead.innerHTML = `Message successfully sent to ${searchContent}`;
+    document.getElementById("error").innerHTML = "";
   }
 }
 
