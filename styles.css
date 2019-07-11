@@ -559,13 +559,14 @@ input[type="search"] {
 .widget-container-graph {
   position: relative;
   height: 30vh;
-  width: 92vw;
 }
 
 @media (min-width: 768px) {
   .widget-container-graph {
     height: 40vh;
-    width: 90vw;
+    margin: 0px;
+    padding: 0px 0px;
+    clear: right;
   }
 }
 
@@ -1005,8 +1006,8 @@ hr {
 
 @media (min-width: 768px) {
   #dialogbox {
-    left: 155px;
-    bottom: 100px;
+    left: 40%;
+    bottom: 50%;
   }
 }
 
@@ -1072,6 +1073,10 @@ hr {
   color: rgb(194, 194, 194);
   font-size: 0.9em;
   align-content: left;
+}
+
+.message-form textarea:checked {
+  background-color: rgb(232, 240, 254);
 }
 
 #error {
