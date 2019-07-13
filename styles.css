@@ -36,7 +36,7 @@ a img {
   /* grid-template-columns: 100%; */
   /* grid-auto-rows: auto; */
   /* grid-template-columns: 80px 1fr; */
-  grid-template-rows: 58px 63px 1fr;
+  grid-template-rows: 58px 63px;
   grid-template-areas:
     "header"
     "sidenav"
@@ -498,8 +498,8 @@ input[type="search"] {
   margin-left: 1em;
   margin-right: 1em;
   position: absolute;
-  right: 20px;
-  top: 220px;
+  right: -4em;
+  top: 218px;
   fill: white;
 }
 
@@ -1000,9 +1000,9 @@ hr {
   background: rgb(255, 255, 255);
   box-shadow: 0 1px 3px rgba(99, 99, 99, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 6px;
-  width: 400px;
   bottom: 300px;
-  left: 55px;
+  right: 2em;
+  left: 0.5em;
   justify-content: center;
   align-items: center;
 }
@@ -1026,8 +1026,6 @@ hr {
 #dialogbox > div > #dialogbody {
   padding: 8px 32px;
   text-align: center;
-  margin: auto;
-  /* padding-bottom: 10px; */
 }
 
 #dialogbody button {
@@ -1129,7 +1127,7 @@ hr {
   vertical-align: middle;
   color: grey;
   font-weight: 400;
-  /* float: left; */
+
   margin-top: 0;
 }
 
@@ -1137,7 +1135,6 @@ hr {
   color: grey;
   font-weight: 400;
   margin-right: 0.5em;
-  /* float: left; */
 }
 
 .setting-form {
