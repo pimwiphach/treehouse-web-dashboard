@@ -36,7 +36,7 @@ a img {
   /* grid-template-columns: 100%; */
   /* grid-auto-rows: auto; */
   /* grid-template-columns: 80px 1fr; */
-  grid-template-rows: 58px 63px;
+  grid-template-rows: 58px 63px 1fr;
   grid-template-areas:
     "header"
     "sidenav"
@@ -467,45 +467,35 @@ input[type="search"] {
 }
 
 .alert-box {
-  padding-right: 40px;
+  padding-right: 20px;
   padding-left: 20px;
   background-color: #6b70be;
   text-align: left;
   color: white;
   border-radius: 6px;
   font-size: 14px;
-  justify-content: center;
-  vertical-align: middle;
-}
-
-.alert-box li {
-  display: inline;
-}
-
-.alert-message p {
-  margin-right: 1em;
-  list-style: none;
 }
 
 .icon-close {
-  width: 12px;
-  height: 12px;
+  margin-left: 100%;
+}
+
+.alert-message li {
+  float: left;
+}
+
+.icon-close li {
+  /* margin-left: 100%; */
+  width: 20px;
+  height: 20px;
   vertical-align: middle;
-  display: inline-block;
-  align-content: right;
-  list-style: none;
-  /* float: right;*/
-  margin-left: 1em;
-  margin-right: 1em;
-  position: absolute;
-  right: -4em;
-  top: 218px;
-  fill: white;
+  display: inline;
+  margin-left: 100%;
 }
 
 @media (min-width: 768px) {
   .icon-close {
-    top: 157px;
+    /* top: 157px; */
   }
 }
 
