@@ -349,7 +349,7 @@ a img {
   fill: #333;
   transition: 0.3s all ease-in-out;
   justify-content: space-between;
-  margin-right: 3em;
+  margin-right: 2em;
 }
 
 @media (min-width: 768px) {
