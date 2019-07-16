@@ -486,18 +486,18 @@ input[type="search"] {
 
 .icon-close li {
   /* margin-left: 100%; */
-  width: 20px;
-  height: 20px;
+  /* width: 20px; */
+  /* height: 20px; */
   vertical-align: middle;
   display: inline;
   margin-left: 100%;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .icon-close {
-    /* top: 157px; */
+    margin-left: 4em;
   }
-}
+} */
 
 .header-traffic {
   padding-bottom: 1em;
