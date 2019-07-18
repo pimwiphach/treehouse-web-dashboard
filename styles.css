@@ -477,19 +477,38 @@ input[type="search"] {
 }
 
 .icon-close {
-  margin-left: 100%;
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1; */
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.close-icon-li {
+  display: inline-flex;
+  flex-direction: column;
+  float: right;
+  margin-top: 15px;
 }
 
 .alert-message li {
   float: left;
 }
 
+.alert-box icon-close {
+  float: right;
+}
+
 .icon-close li {
   /* margin-left: 100%; */
   /* width: 20px; */
-  /* height: 20px; */
+  /* height: 20px;
+  top: 0;
+  right: 0; */
   vertical-align: middle;
   display: inline;
+  position: absolute;
   margin-left: 100%;
 }
 
